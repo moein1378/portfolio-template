@@ -1,0 +1,127 @@
+$gold: #F0932B;
+$darkblue: #30336B;
+$calibri: Calibri;
+@font-face {
+    font-family: dima;
+    src: url("../fonts/DIMAYEKANWEB.TTF");
+}
+
+
+/***title style***/
+
+.title_style {
+    font-family: dima;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    color: $darkblue;
+    text-transform: capitalize;
+    h3 {
+        vertical-align: middle;
+        display: initial;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 4px;
+            height: 35px;
+            background-color: $gold;
+            left: 0;
+        }
+    }
+}
+
+
+/***title style***/
+
+
+/***btn stytle***/
+
+@mixin btn_style($font_color,
+$btn_bg_color) {
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+    background-color: $btn_bg_color;
+    color: $font_color;
+    font-family: $calibri;
+    font-size: 20px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    border: 2px solid $gold;
+}
+
+
+/***btn stytle end***/
+
+
+/***float shapes animation***/
+
+@keyframes rotating_shape {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+@keyframes moving_spherical_shape {
+    0% {
+        right: 23px;
+        top: 0;
+    }
+    25% {
+        right: 23px;
+        top: -30px;
+    }
+    50% {
+        top: -30px;
+        right: 80px;
+    }
+    75% {
+        top: -30px;
+        right: 23px;
+    }
+    100% {
+        right: 23px;
+        top: 0;
+    }
+}
+
+@keyframes horizontal_moving_shape {
+    0% {
+        padding-left: 0;
+    }
+    50% {
+        padding-left: 40px;
+    }
+    100% {
+        padding-left: 0;
+    }
+}
+
+@keyframes vertical_moving_shape {
+    0% {
+        top: 55px;
+    }
+    50% {
+        top: -35px;
+    }
+    100% {
+        top: 55px;
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+
+/***float shapes animation end***/
